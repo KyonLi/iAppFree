@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Application;
 
 @interface DownloadData : NSObject
 
@@ -18,5 +19,7 @@
 + (NSURLSessionDataTask *)getAppFreeDataWithBlock:(void (^)(NSArray *data, NSError *error))block andPage:(NSInteger)page;
 #pragma mark --专题
 + (NSURLSessionDataTask *)getSubjectDataWithBlock:(void (^)(NSArray *data, NSError *error))block andPage:(NSInteger)page;
+#pragma mark --详情
++ (NSURLSessionDataTask *)getDetailDataWithBlock:(void (^)(Application *data, NSError *error))block andAppId:(NSString *)appId;
 
 @end

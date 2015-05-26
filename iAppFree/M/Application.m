@@ -13,10 +13,13 @@
 
 - (void)dealloc {
     [_applicationId release];
+    [_appurl release];
     [_categoryId release];
     [_categoryName release];
+    [_currentVersion release];
     [_currentPrice release];
     [_appDescription release];
+    [_description_long release];
     [_downloads release];
     [_expireDatetime release];
     [_favorites release];
@@ -24,8 +27,10 @@
     [_iconUrl release];
     [_ipa release];
     [_itunesUrl release];
+    [_language release];
     [_lastPrice release];
     [_name release];
+    [_newversion release];
     [_priceTrend release];
     [_ratingOverall release];
     [_releaseDate release];
@@ -34,9 +39,13 @@
     [_slug release];
     [_starCurrent release];
     [_starOverall release];
+    [_systemRequirements release];
+    [_sellerId release];
+    [_sellerName release];
     [_updateDate release];
     [_version release];
     [_comment release];
+    [_photos release];
     [super dealloc];
 }
 

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B778D6DA1B146D6100F1DB8C /* LimitFreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B778D6D81B146D6100F1DB8C /* LimitFreeDetailViewController.m */; };
+		B778D6DB1B146D6100F1DB8C /* LimitFreeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B778D6D91B146D6100F1DB8C /* LimitFreeDetailViewController.xib */; };
+		B778D6E01B14795200F1DB8C /* appdetail_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DC1B14795200F1DB8C /* appdetail_background.png */; };
+		B778D6E11B14795200F1DB8C /* appdetail_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DD1B14795200F1DB8C /* appdetail_background@2x.png */; };
+		B778D6E21B14795200F1DB8C /* appdetail_recommend.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DE1B14795200F1DB8C /* appdetail_recommend.png */; };
+		B778D6E31B14795200F1DB8C /* appdetail_recommend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DF1B14795200F1DB8C /* appdetail_recommend@2x.png */; };
+		B778D6EA1B1485D700F1DB8C /* Detail_btn_left.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6E41B1485D700F1DB8C /* Detail_btn_left.png */; };
+		B778D6EB1B1485D700F1DB8C /* Detail_btn_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6E51B1485D700F1DB8C /* Detail_btn_left@2x.png */; };
+		B778D6EC1B1485D700F1DB8C /* Detail_btn_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6E61B1485D700F1DB8C /* Detail_btn_middle.png */; };
+		B778D6ED1B1485D700F1DB8C /* Detail_btn_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6E71B1485D700F1DB8C /* Detail_btn_middle@2x.png */; };
+		B778D6EE1B1485D700F1DB8C /* Detail_btn_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6E81B1485D700F1DB8C /* Detail_btn_right.png */; };
+		B778D6EF1B1485D700F1DB8C /* Detail_btn_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6E91B1485D700F1DB8C /* Detail_btn_right@2x.png */; };
 		B79A0BDD1B0F2DC0005F8BCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0BDC1B0F2DC0005F8BCD /* main.m */; };
 		B79A0BE01B0F2DC0005F8BCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0BDF1B0F2DC0005F8BCD /* AppDelegate.m */; };
 		B79A0BE81B0F2DC0005F8BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79A0BE71B0F2DC0005F8BCD /* Images.xcassets */; };
@@ -130,6 +142,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B778D6D71B146D6100F1DB8C /* LimitFreeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitFreeDetailViewController.h; sourceTree = "<group>"; };
+		B778D6D81B146D6100F1DB8C /* LimitFreeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitFreeDetailViewController.m; sourceTree = "<group>"; };
+		B778D6D91B146D6100F1DB8C /* LimitFreeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitFreeDetailViewController.xib; sourceTree = "<group>"; };
+		B778D6DC1B14795200F1DB8C /* appdetail_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdetail_background.png; sourceTree = "<group>"; };
+		B778D6DD1B14795200F1DB8C /* appdetail_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appdetail_background@2x.png"; sourceTree = "<group>"; };
+		B778D6DE1B14795200F1DB8C /* appdetail_recommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdetail_recommend.png; sourceTree = "<group>"; };
+		B778D6DF1B14795200F1DB8C /* appdetail_recommend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appdetail_recommend@2x.png"; sourceTree = "<group>"; };
+		B778D6E41B1485D700F1DB8C /* Detail_btn_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detail_btn_left.png; sourceTree = "<group>"; };
+		B778D6E51B1485D700F1DB8C /* Detail_btn_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Detail_btn_left@2x.png"; sourceTree = "<group>"; };
+		B778D6E61B1485D700F1DB8C /* Detail_btn_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detail_btn_middle.png; sourceTree = "<group>"; };
+		B778D6E71B1485D700F1DB8C /* Detail_btn_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Detail_btn_middle@2x.png"; sourceTree = "<group>"; };
+		B778D6E81B1485D700F1DB8C /* Detail_btn_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detail_btn_right.png; sourceTree = "<group>"; };
+		B778D6E91B1485D700F1DB8C /* Detail_btn_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Detail_btn_right@2x.png"; sourceTree = "<group>"; };
 		B79A0BD71B0F2DC0005F8BCD /* iAppFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAppFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79A0BDB1B0F2DC0005F8BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B79A0BDC1B0F2DC0005F8BCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -389,6 +414,9 @@
 				B79A0C041B0F30C4005F8BCD /* LimitFreeViewController.h */,
 				B79A0C051B0F30C4005F8BCD /* LimitFreeViewController.m */,
 				B79A0C061B0F30C4005F8BCD /* LimitFreeViewController.xib */,
+				B778D6D71B146D6100F1DB8C /* LimitFreeDetailViewController.h */,
+				B778D6D81B146D6100F1DB8C /* LimitFreeDetailViewController.m */,
+				B778D6D91B146D6100F1DB8C /* LimitFreeDetailViewController.xib */,
 				B79A0C0A1B0F30C4005F8BCD /* ReducePriceViewController.h */,
 				B79A0C0B1B0F30C4005F8BCD /* ReducePriceViewController.m */,
 				B79A0C0C1B0F30C4005F8BCD /* ReducePriceViewController.xib */,
@@ -490,6 +518,16 @@
 		B79A0C441B0F30C4005F8BCD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B778D6E41B1485D700F1DB8C /* Detail_btn_left.png */,
+				B778D6E51B1485D700F1DB8C /* Detail_btn_left@2x.png */,
+				B778D6E61B1485D700F1DB8C /* Detail_btn_middle.png */,
+				B778D6E71B1485D700F1DB8C /* Detail_btn_middle@2x.png */,
+				B778D6E81B1485D700F1DB8C /* Detail_btn_right.png */,
+				B778D6E91B1485D700F1DB8C /* Detail_btn_right@2x.png */,
+				B778D6DC1B14795200F1DB8C /* appdetail_background.png */,
+				B778D6DD1B14795200F1DB8C /* appdetail_background@2x.png */,
+				B778D6DE1B14795200F1DB8C /* appdetail_recommend.png */,
+				B778D6DF1B14795200F1DB8C /* appdetail_recommend@2x.png */,
 				B79A0C451B0F30C4005F8BCD /* appproduct_appdefault.png */,
 				B79A0C461B0F30C4005F8BCD /* appproduct_appdefault@2x.png */,
 				B79A0C471B0F30C4005F8BCD /* appproduct_starbackground_Topic.png */,
@@ -728,13 +766,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B778D6E01B14795200F1DB8C /* appdetail_background.png in Resources */,
 				B79A0CA81B0F30C5005F8BCD /* LimitFreeViewController.xib in Resources */,
 				B79A0CB01B0F30C5005F8BCD /* SubjectViewController.xib in Resources */,
+				B778D6EA1B1485D700F1DB8C /* Detail_btn_left.png in Resources */,
 				B79A0CDF1B0F30C5005F8BCD /* tabbar_rank_press@2x.png in Resources */,
+				B778D6EE1B1485D700F1DB8C /* Detail_btn_right.png in Resources */,
 				B79A0CAA1B0F30C5005F8BCD /* RankViewController.xib in Resources */,
 				B79A0CD11B0F30C5005F8BCD /* right@2x.png in Resources */,
 				B79A0BEB1B0F2DC0005F8BCD /* LaunchScreen.xib in Resources */,
 				B79A0CE31B0F30C5005F8BCD /* tabbar_reduceprice_press@2x.png in Resources */,
+				B778D6E21B14795200F1DB8C /* appdetail_recommend.png in Resources */,
 				B79A0CCF1B0F30C5005F8BCD /* navigationbar@2x.png in Resources */,
 				B79A0CDD1B0F30C5005F8BCD /* tabbar_rank@2x.png in Resources */,
 				B79A0CD31B0F30C5005F8BCD /* tabbar_appfree@2x.png in Resources */,
@@ -766,21 +808,28 @@
 				B79A0CD51B0F30C5005F8BCD /* tabbar_appfree_press@2x.png in Resources */,
 				B79A0CE91B0F30C5005F8BCD /* tabbar_subject_press@2x.png in Resources */,
 				B79A0CAE1B0F30C5005F8BCD /* RootTabBarController.xib in Resources */,
+				B778D6E11B14795200F1DB8C /* appdetail_background@2x.png in Resources */,
 				B79A0D5C1B0F4BB8005F8BCD /* SVProgressHUD.bundle in Resources */,
 				B79A0CF61B0F30C5005F8BCD /* SubjectTableViewCell.xib in Resources */,
 				B79A0CCA1B0F30C5005F8BCD /* appproduct_starforeground_half_Topic.png in Resources */,
+				B778D6E31B14795200F1DB8C /* appdetail_recommend@2x.png in Resources */,
 				B79A0CDA1B0F30C5005F8BCD /* tabbar_limitfree_press.png in Resources */,
+				B778D6EB1B1485D700F1DB8C /* Detail_btn_left@2x.png in Resources */,
 				B79A0CDE1B0F30C5005F8BCD /* tabbar_rank_press.png in Resources */,
 				B79A0CD81B0F30C5005F8BCD /* tabbar_limitfree.png in Resources */,
 				B79A0CD91B0F30C5005F8BCD /* tabbar_limitfree@2x.png in Resources */,
 				B79A0CDC1B0F30C5005F8BCD /* tabbar_rank.png in Resources */,
 				B79A0CED1B0F30C5005F8BCD /* topic_Download@2x.png in Resources */,
+				B778D6DB1B146D6100F1DB8C /* LimitFreeDetailViewController.xib in Resources */,
 				B79A0CD41B0F30C5005F8BCD /* tabbar_appfree_press.png in Resources */,
 				B79A0CF01B0F30C5005F8BCD /* LimitFreeTableViewCell.xib in Resources */,
 				B79A0CD21B0F30C5005F8BCD /* tabbar_appfree.png in Resources */,
+				B778D6ED1B1485D700F1DB8C /* Detail_btn_middle@2x.png in Resources */,
+				B778D6EF1B1485D700F1DB8C /* Detail_btn_right@2x.png in Resources */,
 				B79A0CEB1B0F30C5005F8BCD /* topic_Comment@2x.png in Resources */,
 				B79A0BE81B0F2DC0005F8BCD /* Images.xcassets in Resources */,
 				B79A0CEC1B0F30C5005F8BCD /* topic_Download.png in Resources */,
+				B778D6EC1B1485D700F1DB8C /* Detail_btn_middle.png in Resources */,
 				B79A0CE51B0F30C5005F8BCD /* tabBar_Slider@2x.png in Resources */,
 				B79A0CE61B0F30C5005F8BCD /* tabbar_subject.png in Resources */,
 			);
@@ -794,6 +843,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79A0CEE1B0F30C5005F8BCD /* Help.m in Sources */,
+				B778D6DA1B146D6100F1DB8C /* LimitFreeDetailViewController.m in Sources */,
 				B79A0CC01B0F30C5005F8BCD /* UIAlertView+AFNetworking.m in Sources */,
 				B79A0CC21B0F30C5005F8BCD /* UIImageView+AFNetworking.m in Sources */,
 				B79A0CF11B0F30C5005F8BCD /* ReducePriceTableViewCell.m in Sources */,

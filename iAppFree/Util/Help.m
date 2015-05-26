@@ -60,7 +60,7 @@
     NSInteger hour = timeInterval/3600;
     NSInteger minutes = (NSInteger)timeInterval%3600/60;
     NSInteger seconds = (NSInteger)timeInterval%3600%60;
-    return [NSString stringWithFormat:@"%ld:%ld:%ld", hour, minutes, seconds];
+    return [NSString stringWithFormat:@"剩余 %ld:%ld:%ld", hour, minutes, seconds];
 }
 
 @end
