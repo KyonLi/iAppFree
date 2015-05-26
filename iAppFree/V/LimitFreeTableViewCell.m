@@ -32,7 +32,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _categoryDic = [@{@"Game":@"游戏"} retain];
+    _categoryDic = [@{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐"} retain];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
