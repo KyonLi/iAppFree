@@ -11,7 +11,6 @@
 		B79A0BE01B0F2DC0005F8BCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0BDF1B0F2DC0005F8BCD /* AppDelegate.m */; };
 		B79A0BE81B0F2DC0005F8BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79A0BE71B0F2DC0005F8BCD /* Images.xcassets */; };
 		B79A0BEB1B0F2DC0005F8BCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0BE91B0F2DC0005F8BCD /* LaunchScreen.xib */; };
-		B79A0BF71B0F2DC0005F8BCD /* iAppFreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0BF61B0F2DC0005F8BCD /* iAppFreeTests.m */; };
 		B79A0CA51B0F30C5005F8BCD /* AppFreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C021B0F30C4005F8BCD /* AppFreeViewController.m */; };
 		B79A0CA61B0F30C5005F8BCD /* AppFreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C031B0F30C4005F8BCD /* AppFreeViewController.xib */; };
 		B79A0CA71B0F30C5005F8BCD /* LimitFreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C051B0F30C4005F8BCD /* LimitFreeViewController.m */; };
@@ -130,16 +129,6 @@
 		B79A0D821B0F4F3B005F8BCD /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D761B0F4F3B005F8BCD /* UIView+MJExtension.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B79A0BF11B0F2DC0005F8BCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B79A0BCF1B0F2DBF005F8BCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B79A0BD61B0F2DC0005F8BCD;
-			remoteInfo = iAppFree;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B79A0BD71B0F2DC0005F8BCD /* iAppFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAppFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79A0BDB1B0F2DC0005F8BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,9 +137,6 @@
 		B79A0BDF1B0F2DC0005F8BCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B79A0BE71B0F2DC0005F8BCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B79A0BEA1B0F2DC0005F8BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B79A0BF01B0F2DC0005F8BCD /* iAppFreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iAppFreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B79A0BF51B0F2DC0005F8BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B79A0BF61B0F2DC0005F8BCD /* iAppFreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iAppFreeTests.m; sourceTree = "<group>"; };
 		B79A0C011B0F30C4005F8BCD /* AppFreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFreeViewController.h; sourceTree = "<group>"; };
 		B79A0C021B0F30C4005F8BCD /* AppFreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFreeViewController.m; sourceTree = "<group>"; };
 		B79A0C031B0F30C4005F8BCD /* AppFreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppFreeViewController.xib; sourceTree = "<group>"; };
@@ -347,13 +333,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B79A0BED1B0F2DC0005F8BCD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -361,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				B79A0BD91B0F2DC0005F8BCD /* iAppFree */,
-				B79A0BF31B0F2DC0005F8BCD /* iAppFreeTests */,
 				B79A0BD81B0F2DC0005F8BCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -370,7 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				B79A0BD71B0F2DC0005F8BCD /* iAppFree.app */,
-				B79A0BF01B0F2DC0005F8BCD /* iAppFreeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,23 +376,6 @@
 				B79A0BDF1B0F2DC0005F8BCD /* AppDelegate.m */,
 				B79A0BDB1B0F2DC0005F8BCD /* Info.plist */,
 				B79A0BDC1B0F2DC0005F8BCD /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B79A0BF31B0F2DC0005F8BCD /* iAppFreeTests */ = {
-			isa = PBXGroup;
-			children = (
-				B79A0BF61B0F2DC0005F8BCD /* iAppFreeTests.m */,
-				B79A0BF41B0F2DC0005F8BCD /* Supporting Files */,
-			);
-			path = iAppFreeTests;
-			sourceTree = "<group>";
-		};
-		B79A0BF41B0F2DC0005F8BCD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B79A0BF51B0F2DC0005F8BCD /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -731,24 +691,6 @@
 			productReference = B79A0BD71B0F2DC0005F8BCD /* iAppFree.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B79A0BEF1B0F2DC0005F8BCD /* iAppFreeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B79A0BFD1B0F2DC0005F8BCD /* Build configuration list for PBXNativeTarget "iAppFreeTests" */;
-			buildPhases = (
-				B79A0BEC1B0F2DC0005F8BCD /* Sources */,
-				B79A0BED1B0F2DC0005F8BCD /* Frameworks */,
-				B79A0BEE1B0F2DC0005F8BCD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B79A0BF21B0F2DC0005F8BCD /* PBXTargetDependency */,
-			);
-			name = iAppFreeTests;
-			productName = iAppFreeTests;
-			productReference = B79A0BF01B0F2DC0005F8BCD /* iAppFreeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -760,10 +702,6 @@
 				TargetAttributes = {
 					B79A0BD61B0F2DC0005F8BCD = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					B79A0BEF1B0F2DC0005F8BCD = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = B79A0BD61B0F2DC0005F8BCD;
 					};
 				};
 			};
@@ -781,7 +719,6 @@
 			projectRoot = "";
 			targets = (
 				B79A0BD61B0F2DC0005F8BCD /* iAppFree */,
-				B79A0BEF1B0F2DC0005F8BCD /* iAppFreeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -846,13 +783,6 @@
 				B79A0CEC1B0F30C5005F8BCD /* topic_Download.png in Resources */,
 				B79A0CE51B0F30C5005F8BCD /* tabBar_Slider@2x.png in Resources */,
 				B79A0CE61B0F30C5005F8BCD /* tabbar_subject.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B79A0BEE1B0F2DC0005F8BCD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,23 +861,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B79A0BEC1B0F2DC0005F8BCD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B79A0BF71B0F2DC0005F8BCD /* iAppFreeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B79A0BF21B0F2DC0005F8BCD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B79A0BD61B0F2DC0005F8BCD /* iAppFree */;
-			targetProxy = B79A0BF11B0F2DC0005F8BCD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B79A0BE91B0F2DC0005F8BCD /* LaunchScreen.xib */ = {
@@ -1063,40 +977,6 @@
 			};
 			name = Release;
 		};
-		B79A0BFE1B0F2DC0005F8BCD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = iAppFreeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iAppFree.app/iAppFree";
-			};
-			name = Debug;
-		};
-		B79A0BFF1B0F2DC0005F8BCD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = iAppFreeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iAppFree.app/iAppFree";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1114,15 +994,6 @@
 			buildConfigurations = (
 				B79A0BFB1B0F2DC0005F8BCD /* Debug */,
 				B79A0BFC1B0F2DC0005F8BCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B79A0BFD1B0F2DC0005F8BCD /* Build configuration list for PBXNativeTarget "iAppFreeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B79A0BFE1B0F2DC0005F8BCD /* Debug */,
-				B79A0BFF1B0F2DC0005F8BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
