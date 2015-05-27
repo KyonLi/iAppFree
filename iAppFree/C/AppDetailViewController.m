@@ -9,6 +9,8 @@
 #import "AppDetailViewController.h"
 #import "Application.h"
 #import "UIImageView+WebCache.h"
+#import "UIViewController+CWPopup.h"
+#import "ScreenshotViewController.h"
 
 @interface AppDetailViewController ()
 {
@@ -42,6 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.useBlurForPopup = YES;
     [[self navigationItem] setTitle:@"应用详情"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 63, 30)];
@@ -70,17 +73,22 @@
     [_appInfo setText:[NSString stringWithFormat:@"原价:¥%@ %@ %@MB\n类型:%@  评分:%@", _app.lastPrice, [Help translate:_app.priceTrend], _app.fileSize, [Help translate:_app.categoryName], _app.starOverall]];
     [_appDescription setText:_app.appDescription];
     
-    CGFloat beiShu = _screenshot.frame.size.height / 53;
+    CGFloat imageHeight = _screenshot.frame.size.height;
+    CGFloat imageWidth = imageHeight / 3 * 2;
     NSArray *photos = _app.photos;
     for (NSInteger i = 0; i < photos.count; i++) {
         NSDictionary *dic = photos[i];
         UIImageView *imageView = [[UIImageView alloc] init];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:dic[@"smallUrl"]] placeholderImage:[UIImage imageNamed:@"appproduct_appdefault"]];
-        [imageView setFrame:CGRectMake(i* 94 * beiShu, 0, 94 * beiShu, _screenshot.frame.size.height)];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:dic[@"smallUrl"]] placeholderImage:[UIImage imageNamed:@"egopv_photo_placeholder"]];
+        [imageView setFrame:CGRectMake(i* (imageWidth + 10), 0, imageWidth, imageHeight)];
+        [imageView setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+        [imageView addGestureRecognizer:tapRecognizer];
+        [tapRecognizer release];
         [_screenshot addSubview:imageView];
         [imageView release];
     }
-    [_screenshot setContentSize:CGSizeMake(photos.count * 94 *beiShu, _screenshot.frame.size.height)];
+    [_screenshot setContentSize:CGSizeMake(photos.count * (imageWidth + 10) - 10, imageHeight)];
 }
 
 - (void)refreshRecommendApps {
@@ -105,6 +113,21 @@
         [view release];
     }
     [_recommendScrollView setContentSize:CGSizeMake(viewWidth * _recommendApps.count, _recommendScrollView.frame.size.height)];
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)sender {
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    NSInteger imageWidth = (NSInteger)(_screenshot.frame.size.height / 3 * 2 + 10);
+    NSInteger tapLocation = (NSInteger)([sender locationInView:_screenshot].x);
+    NSArray *photos = _app.photos;
+    NSDictionary *dic = photos[tapLocation / imageWidth];
+    NSString *imageUrl = dic[@"originalUrl"];
+    
+    ScreenshotViewController *screenshotVC = [[ScreenshotViewController alloc] initWithImageUrl:imageUrl andPreVC:self];
+    [self presentPopupViewController:screenshotVC animated:YES completion:^{
+        
+    }];
+    [screenshotVC release];
 }
 
 - (void)buttonClicked:(UIButton *)sender {

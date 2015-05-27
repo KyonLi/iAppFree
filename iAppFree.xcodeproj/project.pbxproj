@@ -24,17 +24,12 @@
 		B79A0BE81B0F2DC0005F8BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79A0BE71B0F2DC0005F8BCD /* Images.xcassets */; };
 		B79A0BEB1B0F2DC0005F8BCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0BE91B0F2DC0005F8BCD /* LaunchScreen.xib */; };
 		B79A0CA51B0F30C5005F8BCD /* AppFreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C021B0F30C4005F8BCD /* AppFreeViewController.m */; };
-		B79A0CA61B0F30C5005F8BCD /* AppFreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C031B0F30C4005F8BCD /* AppFreeViewController.xib */; };
 		B79A0CA71B0F30C5005F8BCD /* LimitFreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C051B0F30C4005F8BCD /* LimitFreeViewController.m */; };
-		B79A0CA81B0F30C5005F8BCD /* LimitFreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C061B0F30C4005F8BCD /* LimitFreeViewController.xib */; };
 		B79A0CA91B0F30C5005F8BCD /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C081B0F30C4005F8BCD /* RankViewController.m */; };
 		B79A0CAA1B0F30C5005F8BCD /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C091B0F30C4005F8BCD /* RankViewController.xib */; };
 		B79A0CAB1B0F30C5005F8BCD /* ReducePriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C0B1B0F30C4005F8BCD /* ReducePriceViewController.m */; };
-		B79A0CAC1B0F30C5005F8BCD /* ReducePriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C0C1B0F30C4005F8BCD /* ReducePriceViewController.xib */; };
 		B79A0CAD1B0F30C5005F8BCD /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C0E1B0F30C4005F8BCD /* RootTabBarController.m */; };
-		B79A0CAE1B0F30C5005F8BCD /* RootTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C0F1B0F30C4005F8BCD /* RootTabBarController.xib */; };
 		B79A0CAF1B0F30C5005F8BCD /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C111B0F30C4005F8BCD /* SubjectViewController.m */; };
-		B79A0CB01B0F30C5005F8BCD /* SubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0C121B0F30C4005F8BCD /* SubjectViewController.xib */; };
 		B79A0CB11B0F30C5005F8BCD /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C151B0F30C4005F8BCD /* Application.m */; };
 		B79A0CB21B0F30C5005F8BCD /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C171B0F30C4005F8BCD /* Subject.m */; };
 		B79A0CB31B0F30C5005F8BCD /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0C1A1B0F30C4005F8BCD /* AFAppDotNetAPIClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -141,6 +136,10 @@
 		B79A0D821B0F4F3B005F8BCD /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D761B0F4F3B005F8BCD /* UIView+MJExtension.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B7B1CD601B15542900A068DB /* buttonbar_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD5E1B15542900A068DB /* buttonbar_back.png */; };
 		B7B1CD611B15542900A068DB /* buttonbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */; };
+		B7B1CD651B15D25200A068DB /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1CD641B15D25200A068DB /* UIViewController+CWPopup.m */; };
+		B7B1CD691B15DA4000A068DB /* ScreenshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1CD671B15DA4000A068DB /* ScreenshotViewController.m */; };
+		B7B1CD6D1B15E5F700A068DB /* egopv_photo_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD6B1B15E5F700A068DB /* egopv_photo_placeholder.png */; };
+		B7B1CD6E1B15E5F700A068DB /* egopv_photo_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD6C1B15E5F700A068DB /* egopv_photo_placeholder@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,22 +165,17 @@
 		B79A0BEA1B0F2DC0005F8BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B79A0C011B0F30C4005F8BCD /* AppFreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFreeViewController.h; sourceTree = "<group>"; };
 		B79A0C021B0F30C4005F8BCD /* AppFreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFreeViewController.m; sourceTree = "<group>"; };
-		B79A0C031B0F30C4005F8BCD /* AppFreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppFreeViewController.xib; sourceTree = "<group>"; };
 		B79A0C041B0F30C4005F8BCD /* LimitFreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitFreeViewController.h; sourceTree = "<group>"; };
 		B79A0C051B0F30C4005F8BCD /* LimitFreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitFreeViewController.m; sourceTree = "<group>"; };
-		B79A0C061B0F30C4005F8BCD /* LimitFreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitFreeViewController.xib; sourceTree = "<group>"; };
 		B79A0C071B0F30C4005F8BCD /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
 		B79A0C081B0F30C4005F8BCD /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
 		B79A0C091B0F30C4005F8BCD /* RankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
 		B79A0C0A1B0F30C4005F8BCD /* ReducePriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReducePriceViewController.h; sourceTree = "<group>"; };
 		B79A0C0B1B0F30C4005F8BCD /* ReducePriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReducePriceViewController.m; sourceTree = "<group>"; };
-		B79A0C0C1B0F30C4005F8BCD /* ReducePriceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReducePriceViewController.xib; sourceTree = "<group>"; };
 		B79A0C0D1B0F30C4005F8BCD /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		B79A0C0E1B0F30C4005F8BCD /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
-		B79A0C0F1B0F30C4005F8BCD /* RootTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootTabBarController.xib; sourceTree = "<group>"; };
 		B79A0C101B0F30C4005F8BCD /* SubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectViewController.h; sourceTree = "<group>"; };
 		B79A0C111B0F30C4005F8BCD /* SubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectViewController.m; sourceTree = "<group>"; };
-		B79A0C121B0F30C4005F8BCD /* SubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectViewController.xib; sourceTree = "<group>"; };
 		B79A0C141B0F30C4005F8BCD /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		B79A0C151B0F30C4005F8BCD /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		B79A0C161B0F30C4005F8BCD /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
@@ -352,6 +346,12 @@
 		B79A0D761B0F4F3B005F8BCD /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		B7B1CD5E1B15542900A068DB /* buttonbar_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonbar_back.png; sourceTree = "<group>"; };
 		B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonbar_back@2x.png"; sourceTree = "<group>"; };
+		B7B1CD631B15D25200A068DB /* UIViewController+CWPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWPopup.h"; sourceTree = "<group>"; };
+		B7B1CD641B15D25200A068DB /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
+		B7B1CD661B15DA4000A068DB /* ScreenshotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenshotViewController.h; sourceTree = "<group>"; };
+		B7B1CD671B15DA4000A068DB /* ScreenshotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenshotViewController.m; sourceTree = "<group>"; };
+		B7B1CD6B1B15E5F700A068DB /* egopv_photo_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egopv_photo_placeholder.png; sourceTree = "<group>"; };
+		B7B1CD6C1B15E5F700A068DB /* egopv_photo_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egopv_photo_placeholder@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,25 +414,22 @@
 			children = (
 				B79A0C0D1B0F30C4005F8BCD /* RootTabBarController.h */,
 				B79A0C0E1B0F30C4005F8BCD /* RootTabBarController.m */,
-				B79A0C0F1B0F30C4005F8BCD /* RootTabBarController.xib */,
 				B79A0C041B0F30C4005F8BCD /* LimitFreeViewController.h */,
 				B79A0C051B0F30C4005F8BCD /* LimitFreeViewController.m */,
-				B79A0C061B0F30C4005F8BCD /* LimitFreeViewController.xib */,
 				B79A0C0A1B0F30C4005F8BCD /* ReducePriceViewController.h */,
 				B79A0C0B1B0F30C4005F8BCD /* ReducePriceViewController.m */,
-				B79A0C0C1B0F30C4005F8BCD /* ReducePriceViewController.xib */,
 				B79A0C011B0F30C4005F8BCD /* AppFreeViewController.h */,
 				B79A0C021B0F30C4005F8BCD /* AppFreeViewController.m */,
-				B79A0C031B0F30C4005F8BCD /* AppFreeViewController.xib */,
 				B79A0C101B0F30C4005F8BCD /* SubjectViewController.h */,
 				B79A0C111B0F30C4005F8BCD /* SubjectViewController.m */,
-				B79A0C121B0F30C4005F8BCD /* SubjectViewController.xib */,
 				B79A0C071B0F30C4005F8BCD /* RankViewController.h */,
 				B79A0C081B0F30C4005F8BCD /* RankViewController.m */,
 				B79A0C091B0F30C4005F8BCD /* RankViewController.xib */,
 				B778D6D71B146D6100F1DB8C /* AppDetailViewController.h */,
 				B778D6D81B146D6100F1DB8C /* AppDetailViewController.m */,
 				B778D6D91B146D6100F1DB8C /* AppDetailViewController.xib */,
+				B7B1CD661B15DA4000A068DB /* ScreenshotViewController.h */,
+				B7B1CD671B15DA4000A068DB /* ScreenshotViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -522,6 +519,8 @@
 		B79A0C441B0F30C4005F8BCD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B7B1CD6B1B15E5F700A068DB /* egopv_photo_placeholder.png */,
+				B7B1CD6C1B15E5F700A068DB /* egopv_photo_placeholder@2x.png */,
 				B7B1CD5E1B15542900A068DB /* buttonbar_back.png */,
 				B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */,
 				B778D6E41B1485D700F1DB8C /* Detail_btn_left.png */,
@@ -614,6 +613,7 @@
 		B79A0C7F1B0F30C4005F8BCD /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				B7B1CD621B15D25200A068DB /* CWPopup */,
 				B79A0D5E1B0F4F3B005F8BCD /* MJRefresh */,
 				B79A0D541B0F4BB8005F8BCD /* SVProgressHUD */,
 				B79A0C801B0F30C4005F8BCD /* LPLabel */,
@@ -715,6 +715,15 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		B7B1CD621B15D25200A068DB /* CWPopup */ = {
+			isa = PBXGroup;
+			children = (
+				B7B1CD631B15D25200A068DB /* UIViewController+CWPopup.h */,
+				B7B1CD641B15D25200A068DB /* UIViewController+CWPopup.m */,
+			);
+			path = CWPopup;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -773,8 +782,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B778D6E01B14795200F1DB8C /* appdetail_background.png in Resources */,
-				B79A0CA81B0F30C5005F8BCD /* LimitFreeViewController.xib in Resources */,
-				B79A0CB01B0F30C5005F8BCD /* SubjectViewController.xib in Resources */,
 				B7B1CD611B15542900A068DB /* buttonbar_back@2x.png in Resources */,
 				B778D6EA1B1485D700F1DB8C /* Detail_btn_left.png in Resources */,
 				B79A0CDF1B0F30C5005F8BCD /* tabbar_rank_press@2x.png in Resources */,
@@ -796,17 +803,17 @@
 				B79A0CE81B0F30C5005F8BCD /* tabbar_subject_press.png in Resources */,
 				B79A0CD01B0F30C5005F8BCD /* right.png in Resources */,
 				B79A0D771B0F4F3B005F8BCD /* MJRefresh.bundle in Resources */,
+				B7B1CD6D1B15E5F700A068DB /* egopv_photo_placeholder.png in Resources */,
 				B79A0CE71B0F30C5005F8BCD /* tabbar_subject@2x.png in Resources */,
 				B79A0CC81B0F30C5005F8BCD /* appproduct_starbackground_Topic.png in Resources */,
-				B79A0CA61B0F30C5005F8BCD /* AppFreeViewController.xib in Resources */,
 				B79A0CF41B0F30C5005F8BCD /* SubjectAppTableViewCell.xib in Resources */,
 				B79A0CCB1B0F30C5005F8BCD /* appproduct_starforeground_half_Topic@2x.png in Resources */,
+				B7B1CD6E1B15E5F700A068DB /* egopv_photo_placeholder@2x.png in Resources */,
 				B79A0CD61B0F30C5005F8BCD /* tabbar_bg.png in Resources */,
 				B79A0CE21B0F30C5005F8BCD /* tabbar_reduceprice_press.png in Resources */,
 				B79A0CCE1B0F30C5005F8BCD /* navigationbar.png in Resources */,
 				B79A0CE01B0F30C5005F8BCD /* tabbar_reduceprice.png in Resources */,
 				B79A0CE11B0F30C5005F8BCD /* tabbar_reduceprice@2x.png in Resources */,
-				B79A0CAC1B0F30C5005F8BCD /* ReducePriceViewController.xib in Resources */,
 				B79A0CDB1B0F30C5005F8BCD /* tabbar_limitfree_press@2x.png in Resources */,
 				B79A0CC61B0F30C5005F8BCD /* appproduct_appdefault.png in Resources */,
 				B79A0CE41B0F30C5005F8BCD /* tabBar_Slider.png in Resources */,
@@ -814,7 +821,6 @@
 				B79A0CD71B0F30C5005F8BCD /* tabbar_bg@2x.png in Resources */,
 				B79A0CD51B0F30C5005F8BCD /* tabbar_appfree_press@2x.png in Resources */,
 				B79A0CE91B0F30C5005F8BCD /* tabbar_subject_press@2x.png in Resources */,
-				B79A0CAE1B0F30C5005F8BCD /* RootTabBarController.xib in Resources */,
 				B778D6E11B14795200F1DB8C /* appdetail_background@2x.png in Resources */,
 				B79A0D5C1B0F4BB8005F8BCD /* SVProgressHUD.bundle in Resources */,
 				B79A0CF61B0F30C5005F8BCD /* SubjectTableViewCell.xib in Resources */,
@@ -888,6 +894,7 @@
 				B79A0D5B1B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.m in Sources */,
 				B79A0CBA1B0F30C5005F8BCD /* AFURLRequestSerialization.m in Sources */,
 				B79A0CB91B0F30C5005F8BCD /* AFURLConnectionOperation.m in Sources */,
+				B7B1CD691B15DA4000A068DB /* ScreenshotViewController.m in Sources */,
 				B79A0CB51B0F30C5005F8BCD /* AFHTTPRequestOperationManager.m in Sources */,
 				B79A0BE01B0F2DC0005F8BCD /* AppDelegate.m in Sources */,
 				B79A0D061B0F30C5005F8BCD /* UIImageView+WebCache.m in Sources */,
@@ -903,6 +910,7 @@
 				B79A0CF31B0F30C5005F8BCD /* SubjectAppTableViewCell.m in Sources */,
 				B79A0D7B1B0F4F3B005F8BCD /* MJRefreshGifFooter.m in Sources */,
 				B79A0CFD1B0F30C5005F8BCD /* SDWebImageDownloader.m in Sources */,
+				B7B1CD651B15D25200A068DB /* UIViewController+CWPopup.m in Sources */,
 				B79A0CBD1B0F30C5005F8BCD /* DownloadData.m in Sources */,
 				B79A0D021B0F30C5005F8BCD /* UIImage+GIF.m in Sources */,
 				B79A0D7C1B0F4F3B005F8BCD /* MJRefreshGifHeader.m in Sources */,

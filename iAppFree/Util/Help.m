@@ -64,7 +64,7 @@
 }
 
 + (NSString *)translate:(NSString *)aStr {
-    NSDictionary *dic = @{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐", @"limited":@"限免中", @"sales":@"降价中", @"free":@"免费中"};
+    NSDictionary *dic = @{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐", @"limited":@"限免中", @"sales":@"降价中", @"free":@"免费中", @"Tool":@"工具", @"Photography":@"摄影"};
     return dic[aStr];
 }
 
