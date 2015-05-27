@@ -89,7 +89,7 @@
                             </subviews>
                             <constraints>
                                 <constraint firstItem="Rp7-Tn-T7y" firstAttribute="width" secondItem="OKq-fY-f81" secondAttribute="width" id="0kx-pF-j11"/>
-                                <constraint firstItem="Rp7-Tn-T7y" firstAttribute="width" secondItem="V8e-Ao-TQL" secondAttribute="width" multiplier="2.8" id="122-bj-Cjv"/>
+                                <constraint firstItem="Rp7-Tn-T7y" firstAttribute="width" secondItem="V8e-Ao-TQL" secondAttribute="width" multiplier="2.2" id="122-bj-Cjv"/>
                                 <constraint firstItem="V8e-Ao-TQL" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="top" constant="8" id="1AA-yZ-M4g"/>
                                 <constraint firstAttribute="trailing" secondItem="OKq-fY-f81" secondAttribute="trailing" constant="3" id="4g5-nT-m4I"/>
                                 <constraint firstItem="OKq-fY-f81" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="top" constant="3" id="BmT-0h-zCV"/>
