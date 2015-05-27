@@ -7,6 +7,7 @@
 //
 
 #import "ScreenshotViewController.h"
+#import "SVProgressHUD.h"
 #import "UIViewController+CWPopup.h"
 #import "UIImageView+WebCache.h"
 
@@ -33,10 +34,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    [SVProgressHUD show];
     [[self view] setFrame:CGRectMake(0, 0, SCREEN_WIDTH - 40, SCREEN_HEIGHT - 150)];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.frame];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:_imageUrl] placeholderImage:[UIImage imageNamed:@"egopv_photo_placeholder"]];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:_imageUrl] placeholderImage:[UIImage imageNamed:@"egopv_photo_placeholder"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [SVProgressHUD dismiss];
+    }];
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [imageView addGestureRecognizer:tapRecognizer];
     [imageView setUserInteractionEnabled:YES];
