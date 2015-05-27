@@ -47,7 +47,7 @@
 - (void)refresh {
     [_appIcon sd_setImageWithURL:[NSURL URLWithString:_app.iconUrl] placeholderImage:[UIImage imageNamed:@"appproduct_appdefault"]];
     [_appName setText:_app.name];
-    [_appInfo setText:[NSString stringWithFormat:@"原价:¥%@ 限免中 %@MB\n类型：%@ 评分：%@", _app.lastPrice, _app.fileSize, _app.categoryName, _app.starOverall]];
+    [_appInfo setText:[NSString stringWithFormat:@"原价:¥%@ %@ %@MB\n类型:%@  评分:%@", _app.lastPrice, [Help translate:_app.priceTrend], _app.fileSize, [Help translate:_app.categoryName], _app.starOverall]];
     [_appDescription setText:_app.appDescription];
     
     CGFloat beiShu = _screenshot.frame.size.height / 53;

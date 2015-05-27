@@ -11,9 +11,6 @@
 #import "UIImageView+WebCache.h"
 
 @interface AppFreeTableViewCell ()
-{
-    NSDictionary *_categoryDic;
-}
 
 @property (retain, nonatomic) IBOutlet UIImageView *icon;
 @property (retain, nonatomic) IBOutlet UILabel *name;
@@ -31,7 +28,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _categoryDic = [@{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐"} retain];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -50,7 +46,6 @@
     [_categoryName release];
     [_favorites release];
     [_downloads release];
-    [_categoryDic release];
     [super dealloc];
 }
 
@@ -76,7 +71,7 @@
     
     [_score setText:[NSString stringWithFormat:@"评分：%@分", app.starCurrent]];
     
-    [_categoryName setText:_categoryDic[app.categoryName]];
+    [_categoryName setText:[Help translate:app.categoryName]];
     
     [_favorites setText:[NSString stringWithFormat:@"收藏：%@次", app.favorites]];
     

@@ -63,4 +63,9 @@
     return [NSString stringWithFormat:@"剩余 %ld:%ld:%ld", hour, minutes, seconds];
 }
 
++ (NSString *)translate:(NSString *)aStr {
+    NSDictionary *dic = @{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐", @"limited":@"限免中"};
+    return dic[aStr];
+}
+
 @end

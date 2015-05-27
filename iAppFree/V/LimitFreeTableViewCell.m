@@ -12,9 +12,6 @@
 #import "UIImageView+WebCache.h"
 
 @interface LimitFreeTableViewCell ()
-{
-    NSDictionary *_categoryDic;
-}
 
 @property (retain, nonatomic) IBOutlet UIImageView *icon;
 @property (retain, nonatomic) IBOutlet UILabel *name;
@@ -33,7 +30,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _categoryDic = [@{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐"} retain];
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshTimeLimitLabel:) userInfo:nil repeats:YES];
 }
 
@@ -53,7 +49,6 @@
     [_categoryName release];
     [_favorites release];
     [_downloads release];
-    [_categoryDic release];
     [_expireDatetime release];
     [super dealloc];
 }
@@ -81,7 +76,7 @@
     [_lastPrice setStrikeThroughEnabled:YES];
     [_lastPrice setStrikeThroughColor:[UIColor colorWithWhite:0.494 alpha:1.000]];
     
-    [_categoryName setText:_categoryDic[app.categoryName]];
+    [_categoryName setText:[Help translate:app.categoryName]];
     
     [_favorites setText:[NSString stringWithFormat:@"收藏：%@次", app.favorites]];
     

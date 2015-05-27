@@ -13,5 +13,6 @@
 
 + (void)addStarOnView:(UIView *)view starCount:(NSString *)starCount;
 + (NSString *)intervalSinceNow:(NSString *)theDate;
++ (NSString *)translate:(NSString *)aStr;
 
 @end
