@@ -25,6 +25,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *categoryName;
 @property (retain, nonatomic) IBOutlet UILabel *favorites;
 @property (retain, nonatomic) IBOutlet UILabel *downloads;
+@property (retain, nonatomic) NSString *expireDatetime;
 
 @end
 
@@ -33,6 +34,7 @@
 - (void)awakeFromNib {
     // Initialization code
     _categoryDic = [@{@"Game":@"游戏", @"Health":@"健康", @"Education":@"教育", @"Social":@"社交", @"Book":@"书籍", @"Pastime":@"娱乐"} retain];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshTimeLimitLabel:) userInfo:nil repeats:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -52,6 +54,7 @@
     [_favorites release];
     [_downloads release];
     [_categoryDic release];
+    [_expireDatetime release];
     [super dealloc];
 }
 
@@ -66,10 +69,9 @@
     NSURL *iconUrl = [NSURL URLWithString:app.iconUrl];
     [_icon sd_setImageWithURL:iconUrl placeholderImage:[UIImage imageNamed:@"appproduct_appdefault"]];
     
-    
     [_name setText:[NSString stringWithFormat:@"%ld.%@", index + 1, app.name]];
     
-    [_timeLimit setText:[Help intervalSinceNow:app.expireDatetime]];
+    [self setExpireDatetime:app.expireDatetime];
     
     [Help addStarOnView:_starCurrent starCount:app.starCurrent];
     
@@ -84,6 +86,10 @@
     [_favorites setText:[NSString stringWithFormat:@"收藏：%@次", app.favorites]];
     
     [_downloads setText:[NSString stringWithFormat:@"下载：%@次", app.downloads]];
+}
+
+- (void)refreshTimeLimitLabel:(NSTimer *)sender {
+    [_timeLimit setText:[Help intervalSinceNow:_expireDatetime]];
 }
 
 @end
