@@ -11,6 +11,7 @@
                 <outlet property="appIcon" destination="V8e-Ao-TQL" id="xBP-gX-1qO"/>
                 <outlet property="appInfo" destination="Rp7-Tn-T7y" id="etq-m2-RT7"/>
                 <outlet property="appName" destination="OKq-fY-f81" id="Cvk-V7-k4r"/>
+                <outlet property="screenshot" destination="y4E-iG-hkj" id="pW7-Qz-iMb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,7 +42,17 @@
                         </button>
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHi-1c-SX3" userLabel="截图">
                             <rect key="frame" x="8" y="151" width="568" height="79"/>
-                            <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4E-iG-hkj">
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="79"/>
+                                </scrollView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="y4E-iG-hkj" secondAttribute="bottom" id="9u7-1D-bRh"/>
+                                <constraint firstAttribute="trailing" secondItem="y4E-iG-hkj" secondAttribute="trailing" id="GWV-9L-xaN"/>
+                                <constraint firstItem="y4E-iG-hkj" firstAttribute="top" secondItem="pHi-1c-SX3" secondAttribute="top" id="WhH-Xw-NDV"/>
+                                <constraint firstItem="y4E-iG-hkj" firstAttribute="leading" secondItem="pHi-1c-SX3" secondAttribute="leading" id="w7S-Cj-c7M"/>
+                            </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="介绍" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tic-Om-pWI">
                             <rect key="frame" x="10" y="238" width="566" height="74"/>
@@ -59,7 +70,7 @@
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sME-Eg-gXV" userLabel="标题">
                             <rect key="frame" x="8" y="8" width="568" height="89"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="appproduct_appdefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-Ao-TQL">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-Ao-TQL">
                                     <rect key="frame" x="8" y="8" width="75" height="73"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="应用名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKq-fY-f81">
@@ -99,15 +110,15 @@
                         <constraint firstAttribute="bottom" secondItem="BXI-xo-2zw" secondAttribute="bottom" id="HBO-bu-2Wb"/>
                         <constraint firstItem="pHi-1c-SX3" firstAttribute="top" secondItem="bNd-Cf-Tsb" secondAttribute="bottom" constant="3" id="LCm-vg-nmO"/>
                         <constraint firstItem="bNd-Cf-Tsb" firstAttribute="width" secondItem="7jZ-Rk-vwO" secondAttribute="width" id="LHU-n9-IRW"/>
-                        <constraint firstAttribute="trailing" secondItem="pHi-1c-SX3" secondAttribute="trailing" constant="3" id="LpJ-my-lDI"/>
+                        <constraint firstAttribute="trailing" secondItem="pHi-1c-SX3" secondAttribute="trailing" constant="8" id="LpJ-my-lDI"/>
                         <constraint firstItem="BXI-xo-2zw" firstAttribute="top" secondItem="m2H-8X-y6V" secondAttribute="top" id="NUa-KX-0aP"/>
                         <constraint firstItem="3Y8-g4-FRv" firstAttribute="leading" secondItem="7jZ-Rk-vwO" secondAttribute="trailing" id="OBo-hs-dpT"/>
-                        <constraint firstAttribute="trailing" secondItem="sME-Eg-gXV" secondAttribute="trailing" constant="3" id="QrP-u7-jM2"/>
+                        <constraint firstAttribute="trailing" secondItem="sME-Eg-gXV" secondAttribute="trailing" constant="8" id="QrP-u7-jM2"/>
                         <constraint firstItem="bNd-Cf-Tsb" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="3" id="Qwp-9K-vfG"/>
                         <constraint firstItem="bNd-Cf-Tsb" firstAttribute="height" secondItem="7jZ-Rk-vwO" secondAttribute="height" id="R0O-cN-LYa"/>
-                        <constraint firstAttribute="trailing" secondItem="Tic-Om-pWI" secondAttribute="trailing" constant="3" id="STs-07-jLd"/>
+                        <constraint firstAttribute="trailing" secondItem="Tic-Om-pWI" secondAttribute="trailing" constant="8" id="STs-07-jLd"/>
                         <constraint firstItem="7jZ-Rk-vwO" firstAttribute="leading" secondItem="bNd-Cf-Tsb" secondAttribute="trailing" id="UYJ-hX-7g3"/>
-                        <constraint firstItem="Tic-Om-pWI" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="3" id="UfE-Im-bqW"/>
+                        <constraint firstItem="Tic-Om-pWI" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="8" id="UfE-Im-bqW"/>
                         <constraint firstItem="Tic-Om-pWI" firstAttribute="height" secondItem="sME-Eg-gXV" secondAttribute="height" id="Vto-FK-VBt"/>
                         <constraint firstItem="sME-Eg-gXV" firstAttribute="top" secondItem="m2H-8X-y6V" secondAttribute="top" constant="5" id="XwB-vd-LgZ"/>
                         <constraint firstItem="bNd-Cf-Tsb" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="bottom" constant="3" id="bbm-iJ-ksh"/>
@@ -117,12 +128,12 @@
                         <constraint firstItem="Tic-Om-pWI" firstAttribute="width" secondItem="pHi-1c-SX3" secondAttribute="width" id="fen-tL-EGG"/>
                         <constraint firstAttribute="trailing" secondItem="BXI-xo-2zw" secondAttribute="trailing" id="gJx-Kp-02Z"/>
                         <constraint firstItem="bNd-Cf-Tsb" firstAttribute="height" secondItem="sME-Eg-gXV" secondAttribute="height" multiplier="0.5" id="kD9-G7-ghT"/>
-                        <constraint firstItem="sME-Eg-gXV" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="3" id="oFp-Sw-cvL"/>
+                        <constraint firstItem="sME-Eg-gXV" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="8" id="oFp-Sw-cvL"/>
                         <constraint firstItem="Tic-Om-pWI" firstAttribute="width" secondItem="sME-Eg-gXV" secondAttribute="width" id="onY-3x-Jy2"/>
                         <constraint firstItem="BXI-xo-2zw" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" id="p3O-3j-e0X"/>
                         <constraint firstItem="3Y8-g4-FRv" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="bottom" constant="3" id="rAk-Me-CT7"/>
                         <constraint firstAttribute="bottom" secondItem="Tic-Om-pWI" secondAttribute="bottom" constant="3" id="sox-cf-XI1"/>
-                        <constraint firstItem="pHi-1c-SX3" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="3" id="tMB-W0-Rog"/>
+                        <constraint firstItem="pHi-1c-SX3" firstAttribute="leading" secondItem="m2H-8X-y6V" secondAttribute="leading" constant="8" id="tMB-W0-Rog"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcY-a6-57N" userLabel="推荐">
@@ -160,6 +171,5 @@
         <image name="Detail_btn_right.png" width="100" height="42"/>
         <image name="appdetail_background.png" width="301" height="284"/>
         <image name="appdetail_recommend.png" width="301" height="103"/>
-        <image name="appproduct_appdefault.png" width="57" height="57"/>
     </resources>
 </document>

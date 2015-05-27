@@ -18,6 +18,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *appName;
 @property (retain, nonatomic) IBOutlet UILabel *appInfo;
 @property (retain, nonatomic) IBOutlet UILabel *appDescription;
+@property (retain, nonatomic) IBOutlet UIScrollView *screenshot;
 
 @end
 
@@ -48,6 +49,18 @@
     [_appName setText:_app.name];
     [_appInfo setText:[NSString stringWithFormat:@"原价:¥%@ 限免中 %@MB\n类型：%@ 评分：%@", _app.lastPrice, _app.fileSize, _app.categoryName, _app.starOverall]];
     [_appDescription setText:_app.appDescription];
+    
+    CGFloat beiShu = _screenshot.frame.size.height / 53;
+    NSArray *photos = _app.photos;
+    for (NSInteger i = 0; i < photos.count; i++) {
+        NSDictionary *dic = photos[i];
+        UIImageView *imageView = [[UIImageView alloc] init];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:dic[@"smallUrl"]] placeholderImage:[UIImage imageNamed:@"appproduct_appdefault"]];
+        [imageView setFrame:CGRectMake(i* 94 * beiShu, 0, 94 * beiShu, _screenshot.frame.size.height)];
+        [_screenshot addSubview:imageView];
+        [imageView release];
+    }
+    [_screenshot setContentSize:CGSizeMake(photos.count * 94 *beiShu, _screenshot.frame.size.height)];
 }
 
 - (void)buttonClicked:(UIButton *)sender {
@@ -66,6 +79,7 @@
     [_appName release];
     [_appInfo release];
     [_appDescription release];
+    [_screenshot release];
     [super dealloc];
 }
 @end

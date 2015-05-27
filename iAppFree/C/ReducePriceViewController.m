@@ -30,19 +30,10 @@
     // Do any additional setup after loading the view from its nib.
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [[self navigationItem] setTitle:@"降价"];
-    _page = 1;
     
     [SVProgressHUD show];
     
     _applications = [NSMutableArray new];
-    
-    // 下载数据
-    [DownloadData getReducePriceDataWithBlock:^(NSArray *data, NSError *error) {
-        [_applications addObjectsFromArray:data];
-        [_tableView reloadData];
-        [SVProgressHUD dismiss];
-        [[_tableView footer] setHidden:NO];
-    } andPage:_page];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVGATION_ADD_STATUSBAR_HEIGHT-TABBAR_HEIGHT) style:UITableViewStylePlain];
     [_tableView setDelegate:self];
@@ -57,14 +48,33 @@
     // 添加上拉加载
     [_tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(continueLoadData)];
     [[_tableView footer] setHidden:YES];
+    [[_tableView footer] beginRefreshing];
+    
+    // 添加下拉刷新
+    [_tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
 }
 
 - (void)continueLoadData {
+    // 下载数据
     [DownloadData getReducePriceDataWithBlock:^(NSArray *data, NSError *error) {
         [_applications addObjectsFromArray:data];
         [_tableView reloadData];
+        if (_page == 1) {
+            [SVProgressHUD dismiss];
+            [[_tableView footer] setHidden:NO];
+        }
         [[_tableView footer] endRefreshing];
     } andPage:++_page];
+}
+
+- (void)refreshData {
+    [_applications removeAllObjects];
+    _page = 1;
+    [DownloadData getReducePriceDataWithBlock:^(NSArray *data, NSError *error) {
+        [_applications addObjectsFromArray:data];
+        [_tableView reloadData];
+        [[_tableView header] endRefreshing];
+    } andPage:_page];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
