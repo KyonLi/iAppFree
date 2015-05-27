@@ -136,7 +136,7 @@
 		B79A0D821B0F4F3B005F8BCD /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D761B0F4F3B005F8BCD /* UIView+MJExtension.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B7B1CD601B15542900A068DB /* buttonbar_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD5E1B15542900A068DB /* buttonbar_back.png */; };
 		B7B1CD611B15542900A068DB /* buttonbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */; };
-		B7B1CD651B15D25200A068DB /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1CD641B15D25200A068DB /* UIViewController+CWPopup.m */; };
+		B7B1CD651B15D25200A068DB /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1CD641B15D25200A068DB /* UIViewController+CWPopup.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B7B1CD691B15DA4000A068DB /* ScreenshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B1CD671B15DA4000A068DB /* ScreenshotViewController.m */; };
 		B7B1CD6D1B15E5F700A068DB /* egopv_photo_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD6B1B15E5F700A068DB /* egopv_photo_placeholder.png */; };
 		B7B1CD6E1B15E5F700A068DB /* egopv_photo_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD6C1B15E5F700A068DB /* egopv_photo_placeholder@2x.png */; };
