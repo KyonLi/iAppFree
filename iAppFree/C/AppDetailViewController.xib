@@ -5,7 +5,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LimitFreeDetailViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppDetailViewController">
             <connections>
                 <outlet property="appDescription" destination="Tic-Om-pWI" id="7Gh-34-ptx"/>
                 <outlet property="appIcon" destination="V8e-Ao-TQL" id="xBP-gX-1qO"/>

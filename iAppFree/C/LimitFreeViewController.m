@@ -9,7 +9,7 @@
 #import "LimitFreeViewController.h"
 #import "Application.h"
 #import "LimitFreeTableViewCell.h"
-#import "LimitFreeDetailViewController.h"
+#import "AppDetailViewController.h"
 
 @interface LimitFreeViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -117,7 +117,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Application *app = _applications[indexPath.row];
-    LimitFreeDetailViewController *detailVC = [[LimitFreeDetailViewController alloc] init];
+    AppDetailViewController *detailVC = [[AppDetailViewController alloc] init];
     [detailVC setApplicationId:app.applicationId];
     [[self navigationController] pushViewController:detailVC animated:YES];
     [detailVC release];

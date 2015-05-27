@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B778D6DA1B146D6100F1DB8C /* LimitFreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B778D6D81B146D6100F1DB8C /* LimitFreeDetailViewController.m */; };
-		B778D6DB1B146D6100F1DB8C /* LimitFreeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B778D6D91B146D6100F1DB8C /* LimitFreeDetailViewController.xib */; };
+		B778D6DA1B146D6100F1DB8C /* AppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B778D6D81B146D6100F1DB8C /* AppDetailViewController.m */; };
+		B778D6DB1B146D6100F1DB8C /* AppDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B778D6D91B146D6100F1DB8C /* AppDetailViewController.xib */; };
 		B778D6E01B14795200F1DB8C /* appdetail_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DC1B14795200F1DB8C /* appdetail_background.png */; };
 		B778D6E11B14795200F1DB8C /* appdetail_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DD1B14795200F1DB8C /* appdetail_background@2x.png */; };
 		B778D6E21B14795200F1DB8C /* appdetail_recommend.png in Resources */ = {isa = PBXBuildFile; fileRef = B778D6DE1B14795200F1DB8C /* appdetail_recommend.png */; };
@@ -144,9 +144,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B778D6D71B146D6100F1DB8C /* LimitFreeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitFreeDetailViewController.h; sourceTree = "<group>"; };
-		B778D6D81B146D6100F1DB8C /* LimitFreeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitFreeDetailViewController.m; sourceTree = "<group>"; };
-		B778D6D91B146D6100F1DB8C /* LimitFreeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitFreeDetailViewController.xib; sourceTree = "<group>"; };
+		B778D6D71B146D6100F1DB8C /* AppDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailViewController.h; sourceTree = "<group>"; };
+		B778D6D81B146D6100F1DB8C /* AppDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailViewController.m; sourceTree = "<group>"; };
+		B778D6D91B146D6100F1DB8C /* AppDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppDetailViewController.xib; sourceTree = "<group>"; };
 		B778D6DC1B14795200F1DB8C /* appdetail_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdetail_background.png; sourceTree = "<group>"; };
 		B778D6DD1B14795200F1DB8C /* appdetail_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appdetail_background@2x.png"; sourceTree = "<group>"; };
 		B778D6DE1B14795200F1DB8C /* appdetail_recommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdetail_recommend.png; sourceTree = "<group>"; };
@@ -418,9 +418,6 @@
 				B79A0C041B0F30C4005F8BCD /* LimitFreeViewController.h */,
 				B79A0C051B0F30C4005F8BCD /* LimitFreeViewController.m */,
 				B79A0C061B0F30C4005F8BCD /* LimitFreeViewController.xib */,
-				B778D6D71B146D6100F1DB8C /* LimitFreeDetailViewController.h */,
-				B778D6D81B146D6100F1DB8C /* LimitFreeDetailViewController.m */,
-				B778D6D91B146D6100F1DB8C /* LimitFreeDetailViewController.xib */,
 				B79A0C0A1B0F30C4005F8BCD /* ReducePriceViewController.h */,
 				B79A0C0B1B0F30C4005F8BCD /* ReducePriceViewController.m */,
 				B79A0C0C1B0F30C4005F8BCD /* ReducePriceViewController.xib */,
@@ -433,6 +430,9 @@
 				B79A0C071B0F30C4005F8BCD /* RankViewController.h */,
 				B79A0C081B0F30C4005F8BCD /* RankViewController.m */,
 				B79A0C091B0F30C4005F8BCD /* RankViewController.xib */,
+				B778D6D71B146D6100F1DB8C /* AppDetailViewController.h */,
+				B778D6D81B146D6100F1DB8C /* AppDetailViewController.m */,
+				B778D6D91B146D6100F1DB8C /* AppDetailViewController.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -828,7 +828,7 @@
 				B7B1CD601B15542900A068DB /* buttonbar_back.png in Resources */,
 				B79A0CDC1B0F30C5005F8BCD /* tabbar_rank.png in Resources */,
 				B79A0CED1B0F30C5005F8BCD /* topic_Download@2x.png in Resources */,
-				B778D6DB1B146D6100F1DB8C /* LimitFreeDetailViewController.xib in Resources */,
+				B778D6DB1B146D6100F1DB8C /* AppDetailViewController.xib in Resources */,
 				B79A0CD41B0F30C5005F8BCD /* tabbar_appfree_press.png in Resources */,
 				B79A0CF01B0F30C5005F8BCD /* LimitFreeTableViewCell.xib in Resources */,
 				B79A0CD21B0F30C5005F8BCD /* tabbar_appfree.png in Resources */,
@@ -851,7 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79A0CEE1B0F30C5005F8BCD /* Help.m in Sources */,
-				B778D6DA1B146D6100F1DB8C /* LimitFreeDetailViewController.m in Sources */,
+				B778D6DA1B146D6100F1DB8C /* AppDetailViewController.m in Sources */,
 				B79A0CC01B0F30C5005F8BCD /* UIAlertView+AFNetworking.m in Sources */,
 				B79A0CC21B0F30C5005F8BCD /* UIImageView+AFNetworking.m in Sources */,
 				B79A0CF11B0F30C5005F8BCD /* ReducePriceTableViewCell.m in Sources */,

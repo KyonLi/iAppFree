@@ -1,16 +1,16 @@
 //
-//  LimitFreeDetailViewController.m
+//  AppDetailViewController.m
 //  iAppFree
 //
 //  Created by Kyon on 15/5/26.
 //  Copyright (c) 2015年 Kyon Li. All rights reserved.
 //
 
-#import "LimitFreeDetailViewController.h"
+#import "AppDetailViewController.h"
 #import "Application.h"
 #import "UIImageView+WebCache.h"
 
-@interface LimitFreeDetailViewController ()
+@interface AppDetailViewController ()
 {
     Application *_app;
 }
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation LimitFreeDetailViewController
+@implementation AppDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

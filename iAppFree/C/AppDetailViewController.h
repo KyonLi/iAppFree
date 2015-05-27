@@ -1,5 +1,5 @@
 //
-//  LimitFreeDetailViewController.h
+//  AppDetailViewController.h
 //  iAppFree
 //
 //  Created by Kyon on 15/5/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LimitFreeDetailViewController : UIViewController
+@interface AppDetailViewController : UIViewController
 @property (nonatomic ,retain) NSString *applicationId;
 
 @end
