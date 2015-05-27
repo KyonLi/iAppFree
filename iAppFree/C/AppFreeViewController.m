@@ -9,6 +9,7 @@
 #import "AppFreeViewController.h"
 #import "Application.h"
 #import "AppFreeTableViewCell.h"
+#import "AppDetailViewController.h"
 
 @interface AppFreeViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -112,6 +113,15 @@
         cell.frame = CGRectMake(0, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
         [UIView commitAnimations];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Application *app = _applications[indexPath.row];
+    AppDetailViewController *detailVC = [[AppDetailViewController alloc] init];
+    [detailVC setApplicationId:app.applicationId];
+    [detailVC setHidesBottomBarWhenPushed:YES];
+    [[self navigationController] pushViewController:detailVC animated:YES];
+    [detailVC release];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -26,6 +26,19 @@
 
 @implementation AppDetailViewController
 
+- (void)dealloc {
+    [_applicationId release];
+    [_app release];
+    [_recommendApps release];
+    [_appIcon release];
+    [_appName release];
+    [_appInfo release];
+    [_appDescription release];
+    [_screenshot release];
+    [_recommendScrollView release];
+    [super dealloc];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -103,16 +116,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc {
-    [_applicationId release];
-    [_app release];
-    [_recommendApps release];
-    [_appIcon release];
-    [_appName release];
-    [_appInfo release];
-    [_appDescription release];
-    [_screenshot release];
-    [_recommendScrollView release];
-    [super dealloc];
-}
 @end

@@ -69,7 +69,6 @@
     [appFreeNav release];
     [subjectNav release];
     [rankNav release];
-//    [self setSelectedIndex:2];
     
     UIImage *navBgImage = [UIImage imageNamed:@"navigationbar"];
     [[UINavigationBar appearance] setBackgroundImage:[self resizeImage:navBgImage rect:CGRectMake(0, 0, SCREEN_WIDTH, navBgImage.size.height)] forBarMetrics:UIBarMetricsDefault];

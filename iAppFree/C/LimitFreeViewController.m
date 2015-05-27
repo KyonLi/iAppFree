@@ -119,6 +119,7 @@
     Application *app = _applications[indexPath.row];
     AppDetailViewController *detailVC = [[AppDetailViewController alloc] init];
     [detailVC setApplicationId:app.applicationId];
+    [detailVC setHidesBottomBarWhenPushed:YES];
     [[self navigationController] pushViewController:detailVC animated:YES];
     [detailVC release];
 }
