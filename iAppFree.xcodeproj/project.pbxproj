@@ -139,6 +139,8 @@
 		B79A0D801B0F4F3B005F8BCD /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D721B0F4F3B005F8BCD /* UIScrollView+MJExtension.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B79A0D811B0F4F3B005F8BCD /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D741B0F4F3B005F8BCD /* UIScrollView+MJRefresh.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B79A0D821B0F4F3B005F8BCD /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D761B0F4F3B005F8BCD /* UIView+MJExtension.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B7B1CD601B15542900A068DB /* buttonbar_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD5E1B15542900A068DB /* buttonbar_back.png */; };
+		B7B1CD611B15542900A068DB /* buttonbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -348,6 +350,8 @@
 		B79A0D741B0F4F3B005F8BCD /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		B79A0D751B0F4F3B005F8BCD /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		B79A0D761B0F4F3B005F8BCD /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		B7B1CD5E1B15542900A068DB /* buttonbar_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonbar_back.png; sourceTree = "<group>"; };
+		B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonbar_back@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +522,8 @@
 		B79A0C441B0F30C4005F8BCD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B7B1CD5E1B15542900A068DB /* buttonbar_back.png */,
+				B7B1CD5F1B15542900A068DB /* buttonbar_back@2x.png */,
 				B778D6E41B1485D700F1DB8C /* Detail_btn_left.png */,
 				B778D6E51B1485D700F1DB8C /* Detail_btn_left@2x.png */,
 				B778D6E61B1485D700F1DB8C /* Detail_btn_middle.png */,
@@ -769,6 +775,7 @@
 				B778D6E01B14795200F1DB8C /* appdetail_background.png in Resources */,
 				B79A0CA81B0F30C5005F8BCD /* LimitFreeViewController.xib in Resources */,
 				B79A0CB01B0F30C5005F8BCD /* SubjectViewController.xib in Resources */,
+				B7B1CD611B15542900A068DB /* buttonbar_back@2x.png in Resources */,
 				B778D6EA1B1485D700F1DB8C /* Detail_btn_left.png in Resources */,
 				B79A0CDF1B0F30C5005F8BCD /* tabbar_rank_press@2x.png in Resources */,
 				B778D6EE1B1485D700F1DB8C /* Detail_btn_right.png in Resources */,
@@ -818,6 +825,7 @@
 				B79A0CDE1B0F30C5005F8BCD /* tabbar_rank_press.png in Resources */,
 				B79A0CD81B0F30C5005F8BCD /* tabbar_limitfree.png in Resources */,
 				B79A0CD91B0F30C5005F8BCD /* tabbar_limitfree@2x.png in Resources */,
+				B7B1CD601B15542900A068DB /* buttonbar_back.png in Resources */,
 				B79A0CDC1B0F30C5005F8BCD /* tabbar_rank.png in Resources */,
 				B79A0CED1B0F30C5005F8BCD /* topic_Download@2x.png in Resources */,
 				B778D6DB1B146D6100F1DB8C /* LimitFreeDetailViewController.xib in Resources */,

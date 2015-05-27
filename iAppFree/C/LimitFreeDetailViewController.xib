@@ -45,7 +45,7 @@
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="介绍" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tic-Om-pWI">
                             <rect key="frame" x="10" y="238" width="566" height="74"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -77,11 +77,11 @@
                             </subviews>
                             <constraints>
                                 <constraint firstItem="Rp7-Tn-T7y" firstAttribute="width" secondItem="OKq-fY-f81" secondAttribute="width" id="0kx-pF-j11"/>
-                                <constraint firstItem="Rp7-Tn-T7y" firstAttribute="width" secondItem="V8e-Ao-TQL" secondAttribute="width" multiplier="2.5" id="122-bj-Cjv"/>
-                                <constraint firstItem="V8e-Ao-TQL" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="top" constant="3" id="1AA-yZ-M4g"/>
+                                <constraint firstItem="Rp7-Tn-T7y" firstAttribute="width" secondItem="V8e-Ao-TQL" secondAttribute="width" multiplier="2.8" id="122-bj-Cjv"/>
+                                <constraint firstItem="V8e-Ao-TQL" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="top" constant="8" id="1AA-yZ-M4g"/>
                                 <constraint firstAttribute="trailing" secondItem="OKq-fY-f81" secondAttribute="trailing" constant="3" id="4g5-nT-m4I"/>
                                 <constraint firstItem="OKq-fY-f81" firstAttribute="top" secondItem="sME-Eg-gXV" secondAttribute="top" constant="3" id="BmT-0h-zCV"/>
-                                <constraint firstAttribute="bottom" secondItem="V8e-Ao-TQL" secondAttribute="bottom" constant="3" id="HZ8-Ms-sgH"/>
+                                <constraint firstAttribute="bottom" secondItem="V8e-Ao-TQL" secondAttribute="bottom" constant="8" id="HZ8-Ms-sgH"/>
                                 <constraint firstItem="Rp7-Tn-T7y" firstAttribute="leading" secondItem="V8e-Ao-TQL" secondAttribute="trailing" constant="8" id="Lck-G1-OYq"/>
                                 <constraint firstAttribute="trailing" secondItem="Rp7-Tn-T7y" secondAttribute="trailing" constant="3" id="QNp-5q-UCT"/>
                                 <constraint firstItem="OKq-fY-f81" firstAttribute="leading" secondItem="V8e-Ao-TQL" secondAttribute="trailing" constant="8" id="drd-ft-3tC"/>
