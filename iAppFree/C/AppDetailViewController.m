@@ -13,12 +13,14 @@
 @interface AppDetailViewController ()
 {
     Application *_app;
+    NSArray *_recommendApps;
 }
 @property (retain, nonatomic) IBOutlet UIImageView *appIcon;
 @property (retain, nonatomic) IBOutlet UILabel *appName;
 @property (retain, nonatomic) IBOutlet UILabel *appInfo;
 @property (retain, nonatomic) IBOutlet UILabel *appDescription;
 @property (retain, nonatomic) IBOutlet UIScrollView *screenshot;
+@property (retain, nonatomic) IBOutlet UIScrollView *recommendScrollView;
 
 @end
 
@@ -40,11 +42,16 @@
     
     [DownloadData getDetailDataWithBlock:^(Application *data, NSError *error) {
         _app = [data retain];
-        [self refresh];
+        [self refreshAppDesc];
     } andAppId:_applicationId];
+    
+    [DownloadData getPeripheryDataWithBlock:^(NSArray *data, NSError *error) {
+        _recommendApps = [data retain];
+        [self refreshRecommendApps];
+    } andLongitude:@"116.344539" andLatitude:@"40.034346"];
 }
 
-- (void)refresh {
+- (void)refreshAppDesc {
     [_appIcon sd_setImageWithURL:[NSURL URLWithString:_app.iconUrl] placeholderImage:[UIImage imageNamed:@"appproduct_appdefault"]];
     [_appName setText:_app.name];
     [_appInfo setText:[NSString stringWithFormat:@"原价:¥%@ %@ %@MB\n类型:%@  评分:%@", _app.lastPrice, [Help translate:_app.priceTrend], _app.fileSize, [Help translate:_app.categoryName], _app.starOverall]];
@@ -63,6 +70,30 @@
     [_screenshot setContentSize:CGSizeMake(photos.count * 94 *beiShu, _screenshot.frame.size.height)];
 }
 
+- (void)refreshRecommendApps {
+    CGFloat viewHeight = _recommendScrollView.frame.size.height;
+    CGFloat viewWidth = _recommendScrollView.frame.size.height - 12;
+    for (NSInteger i = 0; i < _recommendApps.count; i++) {
+        Application *app = _recommendApps[i];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(i * viewWidth, 0, viewWidth, viewHeight)];
+        UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, viewWidth - 10, viewWidth - 10)];
+        [iconImageView sd_setImageWithURL:[NSURL URLWithString:app.iconUrl] placeholderImage:[UIImage imageNamed:@"appproduct_appdefault"]];
+        [view addSubview:iconImageView];
+        [iconImageView release];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, viewWidth, viewWidth, 12)];
+        [label setText:app.name];
+        [label setFont:[UIFont systemFontOfSize:11]];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        [label release];
+        
+        [_recommendScrollView addSubview:view];
+        [view release];
+    }
+    [_recommendScrollView setContentSize:CGSizeMake(viewWidth * _recommendApps.count, _recommendScrollView.frame.size.height)];
+}
+
 - (void)buttonClicked:(UIButton *)sender {
     [[self navigationController] popViewControllerAnimated:YES];
 }
@@ -75,11 +106,13 @@
 - (void)dealloc {
     [_applicationId release];
     [_app release];
+    [_recommendApps release];
     [_appIcon release];
     [_appName release];
     [_appInfo release];
     [_appDescription release];
     [_screenshot release];
+    [_recommendScrollView release];
     [super dealloc];
 }
 @end

@@ -102,4 +102,23 @@
     }];
 }
 
++ (NSURLSessionDataTask *)getPeripheryDataWithBlock:(void (^)(NSArray *data, NSError *error))block andLongitude:(NSString *)longitude andLatitude:(NSString *)latitude {
+    return [[AFAppDotNetAPIClient sharedClient] GET:[NSString stringWithFormat:@"free/applications/recommend?longitude=%@&latitude=%@", longitude, latitude] parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
+        NSMutableArray *mutableArray = [NSMutableArray array];
+        NSArray *apps = JSON[@"applications"];
+        for (NSDictionary *dic in apps) {
+            Application *app = [[Application alloc] initWithDic:dic];
+            [mutableArray addObject:app];
+            [app release];
+        }
+        if (block) {
+            block([NSArray arrayWithArray:mutableArray], nil);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (block) {
+            block([NSArray array], error);
+        }
+    }];
+}
+
 @end

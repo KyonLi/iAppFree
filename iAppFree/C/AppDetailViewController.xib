@@ -11,6 +11,7 @@
                 <outlet property="appIcon" destination="V8e-Ao-TQL" id="xBP-gX-1qO"/>
                 <outlet property="appInfo" destination="Rp7-Tn-T7y" id="etq-m2-RT7"/>
                 <outlet property="appName" destination="OKq-fY-f81" id="Cvk-V7-k4r"/>
+                <outlet property="recommendScrollView" destination="E2T-zr-O50" id="O4c-GZ-v6e"/>
                 <outlet property="screenshot" destination="y4E-iG-hkj" id="pW7-Qz-iMb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -142,12 +143,19 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="appdetail_recommend.png" translatesAutoresizingMaskIntoConstraints="NO" id="8cm-Uj-fzg">
                             <rect key="frame" x="0.0" y="0.0" width="584" height="183"/>
                         </imageView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2T-zr-O50" userLabel="附近">
+                            <rect key="frame" x="8" y="8" width="568" height="175"/>
+                        </scrollView>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="E2T-zr-O50" firstAttribute="top" secondItem="ZcY-a6-57N" secondAttribute="top" constant="25" id="NCX-NX-xdQ"/>
                         <constraint firstItem="8cm-Uj-fzg" firstAttribute="top" secondItem="ZcY-a6-57N" secondAttribute="top" id="QyE-kq-0UY"/>
                         <constraint firstAttribute="trailing" secondItem="8cm-Uj-fzg" secondAttribute="trailing" id="SaV-cm-c7p"/>
+                        <constraint firstAttribute="trailing" secondItem="E2T-zr-O50" secondAttribute="trailing" constant="10" id="Sip-sd-39k"/>
+                        <constraint firstItem="E2T-zr-O50" firstAttribute="leading" secondItem="ZcY-a6-57N" secondAttribute="leading" constant="10" id="Urm-Xa-xzB"/>
                         <constraint firstAttribute="bottom" secondItem="8cm-Uj-fzg" secondAttribute="bottom" id="ctF-oS-Whw"/>
                         <constraint firstItem="8cm-Uj-fzg" firstAttribute="leading" secondItem="ZcY-a6-57N" secondAttribute="leading" id="mMX-g7-SvN"/>
+                        <constraint firstAttribute="bottom" secondItem="E2T-zr-O50" secondAttribute="bottom" constant="5" id="nYv-ra-cKI"/>
                     </constraints>
                 </view>
             </subviews>

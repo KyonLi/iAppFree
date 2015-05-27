@@ -21,5 +21,7 @@
 + (NSURLSessionDataTask *)getSubjectDataWithBlock:(void (^)(NSArray *data, NSError *error))block andPage:(NSInteger)page;
 #pragma mark --详情
 + (NSURLSessionDataTask *)getDetailDataWithBlock:(void (^)(Application *data, NSError *error))block andAppId:(NSString *)appId;
+#pragma mark --周边
++ (NSURLSessionDataTask *)getPeripheryDataWithBlock:(void (^)(NSArray *data, NSError *error))block andLongitude:(NSString *)longitude andLatitude:(NSString *)latitude;
 
 @end
