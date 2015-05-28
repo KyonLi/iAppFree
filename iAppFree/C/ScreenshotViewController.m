@@ -11,7 +11,10 @@
 #import "UIImageView+WebCache.h"
 
 @interface ScreenshotViewController ()
-
+{
+    CGFloat _viewWidth;
+    CGFloat _viewHeight;
+}
 @end
 
 @implementation ScreenshotViewController
@@ -30,21 +33,47 @@
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [SVProgressHUD show];
-    [[self view] setFrame:CGRectMake(0, 0, SCREEN_WIDTH - 40, SCREEN_HEIGHT - 150)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.frame];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:_imageUrl] placeholderImage:[UIImage imageNamed:@"egopv_photo_placeholder"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        [SVProgressHUD dismiss];
-    }];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    UIImageView *imageView = [[UIImageView alloc] init];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_imageUrl]];
+    if (data) {
+        UIImage *image = [UIImage imageWithData:data];
+        [imageView setImage:image];
+        CGSize imageSize = image.size;
+        if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
+            [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
+        } else {
+            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 30, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+        }
+    } else {
+        UIImage *image = [UIImage imageNamed:@"egopv_photo_placeholder"];
+        [imageView setImage:image];
+        CGSize imageSize = image.size;
+        if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
+            [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
+        } else {
+            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 30, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+        }
+    }
+    [imageView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [imageView addGestureRecognizer:tapRecognizer];
     [imageView setUserInteractionEnabled:YES];
     [tapRecognizer release];
     [[self view] addSubview:imageView];
     [imageView release];
+    [SVProgressHUD dismiss];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    [SVProgressHUD show];
+    _viewWidth = self.view.frame.size.width-20;
+    _viewHeight = self.view.frame.size.height-60;
+    [[self view] setFrame:CGRectMake(0, 0, 0, 0)];
 }
 
 - (void)tapAction:(UITapGestureRecognizer *)sender {
