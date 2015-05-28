@@ -7,7 +7,6 @@
 //
 
 #import "ScreenshotViewController.h"
-#import "SVProgressHUD.h"
 #import "UIViewController+CWPopup.h"
 #import "UIImageView+WebCache.h"
 
