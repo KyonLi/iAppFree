@@ -44,7 +44,7 @@
         if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
             [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
         } else {
-            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 30, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 20, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
         }
     } else {
         UIImage *image = [UIImage imageNamed:@"egopv_photo_placeholder"];
@@ -53,7 +53,7 @@
         if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
             [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
         } else {
-            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 30, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 20, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
         }
     }
     [imageView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -72,7 +72,7 @@
     // Do any additional setup after loading the view from its nib.
     [SVProgressHUD show];
     _viewWidth = self.view.frame.size.width-20;
-    _viewHeight = self.view.frame.size.height-60;
+    _viewHeight = self.view.frame.size.height-40;
     [[self view] setFrame:CGRectMake(0, 0, 0, 0)];
 }
 
