@@ -36,27 +36,28 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     UIImageView *imageView = [[UIImageView alloc] init];
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_imageUrl]];
-    if (data) {
-        UIImage *image = [UIImage imageWithData:data];
-        [imageView setImage:image];
-        CGSize imageSize = image.size;
-        if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
-            [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:_imageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (!error) {
+            CGSize imageSize = image.size;
+            if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
+                [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
+            } else {
+                [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 20, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+            }
         } else {
-            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 20, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+            UIImage *image = [UIImage imageNamed:@"egopv_photo_placeholder"];
+            [imageView setImage:image];
+            CGSize imageSize = image.size;
+            if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
+                [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
+            } else {
+                [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 20, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
+            }
         }
-    } else {
-        UIImage *image = [UIImage imageNamed:@"egopv_photo_placeholder"];
-        [imageView setImage:image];
-        CGSize imageSize = image.size;
-        if (_viewWidth / imageSize.width * imageSize.height < _viewHeight) {
-            [[self view] setFrame:CGRectMake(10, (_viewHeight - _viewWidth / imageSize.width * imageSize.height) / 2, _viewWidth, _viewWidth / imageSize.width * imageSize.height)];
-        } else {
-            [[self view] setFrame:CGRectMake((_viewWidth - _viewHeight / imageSize.height * imageSize.width) / 2, 20, _viewHeight / imageSize.height * imageSize.width, _viewHeight)];
-        }
-    }
-    [imageView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [imageView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [SVProgressHUD dismiss];
+    }];
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [imageView addGestureRecognizer:tapRecognizer];
@@ -64,7 +65,6 @@
     [tapRecognizer release];
     [[self view] addSubview:imageView];
     [imageView release];
-    [SVProgressHUD dismiss];
 }
 
 - (void)viewDidLoad {
