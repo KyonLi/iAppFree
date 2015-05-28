@@ -75,7 +75,6 @@
     [_lastPrice setStrikeThroughColor:[UIColor colorWithWhite:0.494 alpha:1.000]];
     
     [_categoryName setText:[Help translate:app.categoryName]];
-    NSLog(@"%@", app.categoryName);
     
     [_favorites setText:[NSString stringWithFormat:@"收藏：%@次", app.favorites]];
     
